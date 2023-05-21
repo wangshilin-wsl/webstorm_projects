@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态表格</title>
+    <style>
+        .hh{
+            background-color: #ffb4ab;
+        }
+        .hh1{
+            background-color: white;
+        }
+        div{
+            width: 550px;
+            margin: 5px auto;
+        }
+        table{
+            width: 550px;
+            margin: 0 auto;
+            border: 2px solid #666666;
+        }
+        td{
+            width: 137px;
+            border: 2px solid #666666;
+        }
+        a{
+            text-decoration: none;
+        }
+    </style>
+</head>
+<body>
+<table id="tab">
+    <caption>学生信息表</caption>
+    <tr>
+        <td><input type="checkbox" name="cb" /></td>
+        <td>编号</td>
+        <td>姓名</td>
+        <td>性别</td>
+        <td>操作</td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="cb"/></td>
+        <td>1</td>
+        <td>张三</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);" onclick="del(this);">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="cb"/></td>
+        <td>2</td>
+        <td>李四</td>
+        <td>男</td>
+        <td><a href="javascript:void(0);" onclick="del(this);">删除</a></td>
+    </tr>
+    <tr>
+        <td><input type="checkbox" name="cb"/></td>
+        <td>3</td>
+        <td>王五</td>
+        <td>女</td>
+        <td><a href="javascript:void(0);" onclick="del(this);">删除</a></td>
+    </tr>
+</table>
+<div>
+    <input type="button" value="全选" id="all"/>
+    <input type="button" value="全不选" id="no"/>
+    <input type="button" value="反选" id="fan"/>
+</div>
+<script>
+    window.onload=function () {
+
+        var checkbox = document.getElementsByName("cb");
+        var all = document.getElementById("all");
+        all.onclick = function () {
+            for (var i = 0; i < checkbox.length; i++) {
+                checkbox[i].checked=true;
+            }
+        }
+
+        var no = document.getElementById("no");
+        no.onclick = function () {
+            for (var i = 0; i < checkbox.length; i++) {
+                checkbox[i].checked=false;
+            }
+        }
+
+        var fan = document.getElementById("fan");
+        fan.onclick = function () {
+            for (var i = 0; i < checkbox.length; i++) {
+               // alert(checkbox[i].checked);
+                if (checkbox[i].checked)
+                    checkbox[i].checked = false;
+                else
+                    checkbox[i].checked=true;
+            }
+        }
+        checkbox[0].onclick=function () {
+            for (var i = 1; i < checkbox.length; i++) {
+                checkbox[i].checked=checkbox[0].checked;
+            }
+        }
+
+        //换背景色
+        var trs=document.getElementsByTagName("tr");
+        for(var i=0;i<trs.length;i++)
+        {
+            trs[i].onmouseover=function () {
+                this.className="hh";
+            }
+            trs[i].onmouseout=function () {
+                this.className="hh1";
+            }
+        }
+        function del(obj) {
+            //用获取父节点的方法来找到对应的tr
+            var table = obj.parentNode.parentNode.parentNode;
+            var this_tr = obj.parentNode.parentNode;
+            table.removeChild(this_tr);
+        }
+    }
+</script>
+</body>
+</html>

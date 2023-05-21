@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>9*9乘法表</title>
+    <style>
+        td{
+            border: 1px solid ;
+        }
+    </style>
+    <script>
+        document.write("<table align='center'>");
+        for(var i=1;i<=9;i++) {
+            document.write("<r>")//行的开始
+            for (var j = 1; j <= i; j++) {
+                document.write("<td>")//列的开始
+                document.write(i + "*" + j + "=" + (i * j)+"  ")
+                document.write("</rd>")
+            }
+            document.write("</tr>")
+        }
+        document.write("</table>")
+    </script>
+</head>
+<body>
+
+</body>
+</html>

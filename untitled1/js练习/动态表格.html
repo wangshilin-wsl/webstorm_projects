@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>动态表格</title>
+    <style>
+        div{
+            width: 100%;
+            height: 100px;
+            padding-top: 50px;
+            text-align: center;
+        }
+        table{
+            width: 550px;
+            margin: 0 auto;
+            border: 2px solid #666666;
+        }
+        td{
+            width: 137px;
+            border: 2px solid #666666;
+        }
+        a{
+            text-decoration: none;
+        }
+        </style>
+</head>
+<body>
+<div>
+    <input type="text" placeholder="请输入编号" id="id" />
+    <input type="text"  placeholder="请输入姓名" id="name"/>
+    <input type="text"  placeholder="请输入性别" id="sex"/>
+    <input type="button" value="添加" id="btn_add"/>
+</div>
+<table id="tab">
+    <caption>学生信息表</caption>
+    <tr>
+        <td>
+            编号
+        </td>
+        <td>
+            姓名
+        </td>
+        <td>
+            性别
+        </td>
+        <td>
+            操作
+        </td>
+    </tr>
+    <tr>
+        <td>
+            1
+        </td>
+        <td>
+            张三
+        </td>
+        <td>
+            男
+        </td>
+        <td>
+            <a href="javascript:void(0);" onclick="del(this);">删除</a>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            2
+        </td>
+        <td>
+            李四
+        </td>
+        <td>
+            男
+        </td>
+        <td>
+            <a href="javascript:void(0);" onclick="del(this);">删除</a>
+        </td>
+    </tr>
+    <tr>
+        <td>3</td>
+        <td>王五</td>
+        <td>女</td>
+        <td><a href="javascript:void(0);" onclick="del(this);">删除</a></td>
+    </tr>
+</table>
+<script>
+    //添加功能
+    //获取按钮
+    //第一种方法
+    /*document.getElementById("btn_add").onclick=function () {
+        //获取输入框的内容
+        var id=document.getElementById("id").value;
+        var name=document.getElementById("name").value;
+        var sex=document.getElementById("sex").value;
+        //创建td
+        var td_id=document.createElement("td");
+        //创建text对象,并加入到td中
+        td_id.appendChild(document.createTextNode(id));
+        var td_name=document.createElement("td");
+        td_name.appendChild(document.createTextNode(name));
+        var td_sex=document.createElement("td");
+        td_sex.appendChild(document.createTextNode(sex));
+
+        //a标签
+        var a=document.createElement("a");
+        //设置属性
+        a.setAttribute("href","javascript:void(0);");
+        a.setAttribute("onclick","del(this);");
+        a.appendChild(document.createTextNode("删除"));
+        var td_a=document.createElement("td");
+        td_a.appendChild(a);
+        //创建tr
+        var tr=document.createElement("tr");
+        tr.appendChild(td_id);
+        tr.appendChild(td_name);
+        tr.appendChild(td_sex);
+        tr.appendChild(td_a);
+        document.getElementById("tab").appendChild(tr);
+    }*/
+    //第二种方法
+    document.getElementById("btn_add").onclick=function () {
+        //获取输入框的内容
+        var id = document.getElementById("id").value;
+        var name = document.getElementById("name").value;
+        var sex = document.getElementById("sex").value;
+        var table=document.getElementById("tab");
+        table.innerHTML+="<tr>\n" +
+            "        <td>"+id+"</td>\n" +
+            "        <td>"+name+"</td>\n" +
+            "        <td>"+sex+"</td>\n" +
+            "        <td><a href=\"javascript:void(0);\" onclick=\"del(this);\">删除</a></td>\n" +
+            "    </tr>";
+    }
+
+
+    //公共部分
+    //增加删除的功能
+    function del(obj) {
+        //用获取父节点的方法来找到对应的tr
+        var table=obj.parentNode.parentNode.parentNode;
+        var this_tr=obj.parentNode.parentNode;
+        table.removeChild(this_tr);
+    }
+
+</script>
+</body>
+</html>

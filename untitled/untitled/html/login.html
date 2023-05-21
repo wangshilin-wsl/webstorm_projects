@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <title>商铺订单管理网站</title>
+    <style>
+        *all{
+            margin: 0;
+            padding: 0;
+        }
+        div.inner,table{
+            position:absolute;
+        }
+        #left{
+            margin-top: 100px;
+            width: 750px;
+            height: 500px;
+            background-image:url(./bg.jpg);
+            background-size:100%;
+        }
+        .outer{
+            height: 100%;
+        }
+        .inner{
+            border: 5px solid rgba(255,255,255,1);
+            border-radius: 20px;
+            width: 370px;
+            height: 340px;
+            top: 40%;
+            left: 76%;
+            transform: translate(-50%,-50%);
+            box-shadow:11px 11px 11px rgba(50,50,50,1);	///边框阴影
+        }
+        .table{
+            top: 7%;
+            left: 12%;
+        //border: solid;
+            width: 260px;
+            height: 190px;
+            border-spacing:7px;
+        }
+        .under{
+            position: fixed;
+            left: 0px;
+            bottom: 30px;
+            width: 100%;
+            text-align:center;
+            font-size: 15px;
+        }
+        .TEXT{
+            height:72%;
+            width: 200px;
+        }
+        a {text-decoration: none}
+    </style>
+</head>
+<body>
+<div>
+    <div id="left"></div>
+    <div class="outer">
+        <div class="inner">
+            <table class="table">
+                <caption> <h1>订单管理系统</h1> </caption>
+                <tr height="30px">
+                    <td><big><b>账&nbsp;&nbsp;号</b></big></td>
+                    <td><input type="text" name="username" id="username"class="TEXT"/> </td>
+                </tr>
+                <tr height="30px">
+                    <td><big><b>密&nbsp;&nbsp;码</b></big></td>
+                    <td><input class="TEXT"type="password" name="password" id="password"/> </td>
+                </tr>
+                <tr height="30px">
+                    <td colspan="2" align="right">
+                        <input class="TEXT"type='button' onclick = 'check()' value="            登陆系统              "/>
+                    </td>
+                </tr>
+                <tr height="20px"><td colspan="2" style="text-align:right;font-size:small"><a href = "">联系我们</a> | <a href = "">帮助中心</a> | <a href = "">其他</a></td></tr>
+            </table>
+        </div>
+        <div class="under"><span>显示器分辨率要求≥1024*768，请使用Firefox浏览器（<a href="http://www.firefox.com.cn/" target="_blank">官网下载</a>），可以获得最佳显示效果，Chrome浏览器次之，IE浏览器则要求10或以上版本，其他浏览器较慢且有卡顿等现象。</span></div>
+    </div>
+</div>
+
+</body>
+</html>

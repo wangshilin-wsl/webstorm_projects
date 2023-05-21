@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="7f7ad05f-bbd4-454b-8b1e-78af94017dbb" name="Default" comment="" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="CSS File" />
+        <option value="HTML File" />
+      </list>
+    </option>
+  </component>
+  <component name="ProjectFrameBounds" extendedState="6">
+    <option name="x" value="-59" />
+    <option name="y" value="98" />
+    <option name="width" value="982" />
+    <option name="height" value="1056" />
+  </component>
+  <component name="ProjectId" id="1pgoHgDlLApGlcdSvkejqGFawHF" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="settings.editor.selected.configurable" value="File.Encoding" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="HbShouldOpenHtmlAsHb" value="" />
+    <property name="DefaultHtmlFileTemplate" value="HTML File" />
+    <property name="list.type.of.created.stylesheet" value="CSS" />
+  </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\王世林\WebstormProjects\untitled1\test" />
+    </key>
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\王世林\WebstormProjects\untitled1\Job1\HTML" />
+      <recent name="C:\Users\王世林\WebstormProjects\untitled1\Job1\CSS" />
+      <recent name="C:\Users\王世林\WebstormProjects\untitled1\test" />
+      <recent name="C:\Users\王世林\WebstormProjects\untitled1\js" />
+      <recent name="C:\Users\王世林\WebstormProjects\untitled1\Job1\image" />
+    </key>
+  </component>
+  <component name="RunManager" selected="JavaScript Debug.动态表格.html">
+    <configuration name="全选表格1.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled1/js/全选表格1.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="32132.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled1/js/32132.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="5秒跳转.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled1/js/5秒跳转.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="动态表格.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled1/js/动态表格.html">
+      <method v="2" />
+    </configuration>
+    <configuration name="全选表格.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled1/js/全选表格.html" />
+    <configuration name="表单校验.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled1/js/表单校验.html" />
+    <configuration name="表单校验.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled1/js/表单校验.html" />
+    <configuration name="表单校验.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/untitled1/js/表单校验.html" />
+    <configuration name="表单校验.html" type="JavascriptDebugType" factoryName="JavaScript Debug" temporary="true" nameIsGenerated="true" uri="http://localhost:63343/untitled1/js练习/表单校验.html" />
+    <list>
+      <item itemvalue="JavaScript Debug.动态表格.html" />
+      <item itemvalue="JavaScript Debug.5秒跳转.html" />
+      <item itemvalue="JavaScript Debug.全选表格1.html" />
+      <item itemvalue="JavaScript Debug.32132.html" />
+    </list>
+    <recent_temporary>
+      <list>
+        <item itemvalue="JavaScript Debug.动态表格.html" />
+        <item itemvalue="JavaScript Debug.32132.html" />
+        <item itemvalue="JavaScript Debug.全选表格1.html" />
+        <item itemvalue="JavaScript Debug.5秒跳转.html" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="7f7ad05f-bbd4-454b-8b1e-78af94017dbb" name="Default" comment="" />
+      <created>1582253798482</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1582253798482</updated>
+      <workItem from="1582253799808" duration="818000" />
+      <workItem from="1582254643455" duration="2481000" />
+      <workItem from="1582257267639" duration="72000" />
+      <workItem from="1582271446214" duration="705000" />
+      <workItem from="1582786203404" duration="6449000" />
+      <workItem from="1582792701161" duration="1007000" />
+      <workItem from="1582793796062" duration="997000" />
+      <workItem from="1582849666478" duration="9052000" />
+      <workItem from="1582858760468" duration="158000" />
+      <workItem from="1582859393921" duration="557000" />
+      <workItem from="1582937367651" duration="19128000" />
+      <workItem from="1583216601213" duration="2215000" />
+      <workItem from="1583287262847" duration="10636000" />
+      <workItem from="1583305147494" duration="7306000" />
+      <workItem from="1583886949382" duration="125000" />
+      <workItem from="1583990664396" duration="1946000" />
+      <workItem from="1583992653444" duration="2000" />
+      <workItem from="1584146433157" duration="860000" />
+      <workItem from="1584590531290" duration="1040000" />
+      <workItem from="1585034610117" duration="23000" />
+      <workItem from="1585034669940" duration="60000" />
+      <workItem from="1585203109612" duration="25000" />
+      <workItem from="1585476070302" duration="423000" />
+      <workItem from="1585479436948" duration="985000" />
+      <workItem from="1585806186985" duration="40000" />
+      <workItem from="1585806530006" duration="454000" />
+      <workItem from="1585813121178" duration="173000" />
+      <workItem from="1585813856453" duration="85000" />
+      <workItem from="1585821478412" duration="140000" />
+      <workItem from="1586326914929" duration="24000" />
+      <workItem from="1587001124406" duration="31000" />
+      <workItem from="1587006970353" duration="46000" />
+      <workItem from="1587624144264" duration="29000" />
+      <workItem from="1588648971984" duration="4000" />
+      <workItem from="1588649391001" duration="99000" />
+      <workItem from="1588741401316" duration="34000" />
+      <workItem from="1588836833451" duration="470000" />
+      <workItem from="1588837820423" duration="229000" />
+      <workItem from="1588838898353" duration="34000" />
+      <workItem from="1588841234403" duration="70000" />
+      <workItem from="1595649302169" duration="74000" />
+      <workItem from="1595652534130" duration="177000" />
+      <workItem from="1596765044625" duration="9000" />
+      <workItem from="1601090242727" duration="103000" />
+      <workItem from="1601618048943" duration="724000" />
+      <workItem from="1615614009362" duration="4000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="1" />
+  </component>
+</project>

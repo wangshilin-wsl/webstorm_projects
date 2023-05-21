@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>轮播图</title>
+    <script src="https://s3.pstatp.com/cdn/expire-1-M/jquery/3.0.0/jquery.min.js"></script>
+    <style>
+        .container {
+            width: 1226px;
+            height: 460px;
+            position: relative;
+            overflow: hidden;
+            margin: 0 auto;
+        }
+
+        .img-list {
+            width: 7356px;
+            height: 460px;
+            position: absolute;
+            /* 相对于父级移动 */
+        }
+
+        .img-list img {
+            width: 1226px;
+            height: 460px;
+            display: block;
+            float: left;
+        }
+
+        .img-controls {
+            width: 100%;
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            overflow: hidden;
+        }
+
+        .img-controls #left,
+        #right {
+            width: 41px;
+            height: 69px;
+            display: block;
+        }
+
+
+        .img-direction {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            overflow: hidden;
+            position: absolute;
+            bottom: 20px;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .img-direction li {
+            width: 8px;
+            height: 8px;
+            background-color: rgba(0, 0, 0, 0.4);
+            border: 2px solid #fff;
+            border-color: rgba(255, 255, 255, 0.3);
+            border-radius: 6px;
+            margin: 0 5px;
+            float: left;
+        }
+
+        /* .img-direction li:hover {
+            background-color: #f5f5f5;
+            border-color: rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+            /* 设置鼠标样式
+        } */
+
+        #img-direction .active {
+            background-color: #f5f5f5;
+            border-color: rgba(0, 0, 0, 0.4);
+            cursor: pointer;
+        }
+    </style>
+
+</head>
+<body>
+<!-- 可视窗口 -->
+<div class="container">
+    <div class="img-list">
+        <img src="https://picsum.photos/id/1/500/300">
+        <img src="https://picsum.photos/id/2/500/300">
+        <img src="https://picsum.photos/id/3/500/300">
+        <img src="https://picsum.photos/id/4/500/300">
+        <img src="https://picsum.photos/id/5/500/300">
+        <img src="https://picsum.photos/id/6/500/300">
+    </div>
+    <!--    左右切换按钮-->
+    <div class="img-controls">
+        <a href="#" id="left"></a>
+        <a href="#" id="right"></a>
+    </div>
+    <!--    图片导航器-->
+    <ul id="img-direction" class="img-direction">
+        <li class="active"></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+</div>
+
+<script>
+    var $imgList = $('.img-list'); //获取图片容器元素
+    var listLeft = parseInt($imgList.css('left')); //获取图片容器当前的left的属性值
+    var $imgs = $('.img-list>img') //获取所有图片
+    var imgSum = $imgs.length; //获取所有图片的数量
+    const WIDTH = parseInt($('.container').css('width')); //获取可视窗口的宽度
+    var $imgDir = $('.img-direction>li'); //获取图片当行器中所有<li>元素
+    var index = 0; //表示当前切换图片的索引值
+    // 向右切换按钮的逻辑 - 所有图片的容器向左移动
+    $('#right').click(function (event) {
+        // 为当前动画添加动画
+        $($imgs[index]).animate({
+            opacity: 0
+        }, 200, function () {
+            if (index < (imgSum - 1)) {
+                // 1、将图片的索引值进行更新
+                index++;
+                //2、将图片容器当前的left属性值减少1226px
+                listLeft -= WIDTH;
+            } else {
+                // 1、将图片的索引值进行更新为第一章图片
+                index = 0;
+                // 2、将图片容器当前的left属性值更新为0
+                listLeft = 0;
+            }
+            // 3、将更新后的left属性值重新为图片容器进行设置
+            $imgList.css('left', listLeft);
+            // 4、根据当前图片的索引值，查找对应的图片导航器
+            $($imgDir[index]).addClass('active').siblings('li').removeClass();
+        })
+        event.preventDefault(); //阻止默认行为
+    });
+    // 向左切换按钮的逻辑 - 所有图片的容器向右移动
+    $('#left').click(function (event) {
+        // 为当前图片添加动画
+        $($imgs[index]).animate({
+            opacity: 0
+        }, 200, function () {
+            if (index > 0) {
+                // 1、将图片的索引值进行更新
+                index--;
+                //2、将图片容器当前的left属性值增加1226px
+                listLeft += WIDTH;
+            } else if (index == 0) {
+                // 1、将图片的索引值进行更新为第一张图片
+                index = imgSum - 1;
+                // 2、将图片容器当前的left属性值更新
+                listLeft = -index * WIDTH;
+            }
+            // 3、将更新后的left属性值重新为图片容器进行设置
+            $imgList.css('left', listLeft);
+            // 4、根据当前图片的索引值，查找对应的图片导航器
+            $($imgDir[index]).addClass('active').siblings('li').removeClass();
+
+        })
+        event.preventDefault(); //阻止默认行为
+    });
+
+    // 图片导航器
+    var $imgDir = $('.img-direction>li');
+    $imgDir.mouseover(function () {
+        // 1、实现图片导航器的切换效果
+        $(this).addClass('active').siblings('li').removeClass();
+        /* 2、根据当前图片导航器的切换效果
+            $.inArray(value,arr)
+            * value - 表示在指定数组或集合中查找的数据
+            * arr - 表示数组或集合
+        */
+        index = $.inArray(this, $imgDir);
+        listLeft = -index * WIDTH;
+        $imgList.css('left', listLeft);
+    });
+    // 自动轮播效果
+    setInterval(function () {
+        if (index < (imgSum - 1)) {
+            // 1、将图片的索引值进行更新
+            index++;
+            //2、将图片容器当前的left属性值减少1226px
+            listLeft -= WIDTH;
+        } else {
+            // 1、将图片的索引值进行更新为第一章图片
+            index = 0;
+            // 2、将图片容器当前的left属性值更新为0
+            listLeft = 0;
+        }
+        // 3、将更新后的left属性值重新为图片容器进行设置
+        $imgList.css('left', listLeft);
+
+        // 4、根据当前图片的索引值，查找对应的图片导航器
+        $($imgDir[index]).addClass('active').siblings('li').removeClass();
+    }, 1000);
+
+    /*
+    模拟事件实现自动轮播，但实现效果轮播速度太快
+    function mytrigger(){
+        $('#right').trigger('click');
+        mytrigger();
+    }
+    mytrigger(); */
+</script>
+</body>
+</html>

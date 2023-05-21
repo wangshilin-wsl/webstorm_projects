@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>博客管理</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/semantic-ui/2.2.4/semantic.min.css">
+    <style>
+
+        #search{
+            width: 300px;
+            height: 600px;
+            margin: 250px auto;
+        }
+        body {
+            background-image: url("./timg.jpg") ;
+
+        }
+        #button{
+            width: 80px;
+            height: 35px;
+            color: burlywood;
+          background-color: aquamarine;
+        }
+        #input{
+            width: 200px;
+            height: 35px;
+        }
+        .m-padded-tb-mini{
+            padding-top: 0.2em !important;
+            padding-bottom: 0.2em !important;
+        }
+
+        /*shadow*/
+        .m-shadow-small{
+            -webkit-box-shadow:  0 4px 8px rgba(0,0,0,0.2)!important;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.2)!important;
+        }
+        /*position*/
+        .m-top-right{
+            position: absolute !important;
+            top: 0 !important;
+            right: 0 !important;
+        }
+
+        /*-控制菜单按钮在电脑端不显示--*/
+        .m-mobile-show{
+            display: none !important;
+        }
+        /*-控制菜单按钮在手机端显示，并隐藏导航栏--*/
+        @media screen and (max-width: 768px) {
+            .m-mobile-hide{
+                display: none !important;
+            }
+            .m-mobile-show{
+                display: block !important;
+            }
+        }
+    </style>
+</head>
+<body>
+<!--导航-->
+<nav class="ui hh segment   attached  m-padded-tb-mini m-shadow-small">
+    <div class="ui container">
+        <div class="ui  secondary stackable menu">
+            <h2 class="ui teal header item">管理后台</h2>
+            <a href="#"  class="ui m-item teal header  item m-mobile-hide"><i class="mini teal home icon"></i>博客</a>
+            <a href="#" class="ui m-item teal header item  m-mobile-hide"><i class="mini teal idea icon"></i>分类</a>
+            <a href="#" class=" ui m-item teal header item m-mobile-hide"><i class="mini teal tags icon"></i>标签</a>
+
+        </div>
+    </div>
+    <a href="#" class="ui menu toogle black icon button m-top-right m-mobile-show">
+        <i class="sidebar icon"></i>
+    </a>
+</nav>
+<!--中间内容-->
+<!--<div class="ui container  m-padded-tb-big m-container-small">
+    <div class="ui attached container">
+        &lt;!&ndash;搜索&ndash;&gt;
+        <form action="#" class="ui segment  form" method="post">
+            <div class="inline fields">
+                <div class="field">
+                    <input type="text" name="title" placeholder="">
+                </div>
+                <div class="field">
+                    <button class="ui teal basic button mini"><i class="search icon"></i>搜索</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>-->
+<div id="search">
+    <input type="text" style="border-radius:7px;" id="input">
+    <input type="button" value="搜索" id="button" style="border-radius:7px;">
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.2/dist/jquery.min.js"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.4/semantic.min.js"></script>
+<script>
+    $('.menu.toogle').click(function () {
+        $('.m-item').toggleClass('m-mobile-hide');
+    });
+    $(".ui.dropdown").dropdown({
+        on:'hover'
+    });
+    $('.hh.ui.segment').hover(function () {
+        $('.ui.segment.hh').toggleClass('inverted');
+    })
+</script>
+</body>
+</html>
